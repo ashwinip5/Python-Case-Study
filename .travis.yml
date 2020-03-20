@@ -10,6 +10,9 @@ install:
 script:
   - export PYTHONPATH=$PYTHONPATH:$(pwd)
   - pwd
+  - python Run_Pipline.py
+  - bash Running_Function.sh
+  - echo "Done Done"
 branches:
   only:
    - master
