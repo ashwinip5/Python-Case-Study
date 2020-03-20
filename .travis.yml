@@ -1,0 +1,26 @@
+language: python
+python:
+  - "3.5"
+install:
+  - import expected_range as exp
+  - import Pot_hole_detection as pot
+  - import Road_conditon_detection as road
+  - import CO2_emission as CO2
+  - import Rash_driving_detection as rash
+  
+script:
+  - export PYTHONPATH=$PYTHONPATH:$(pwd)
+  - pwd
+  - cd Function
+
+branches:
+  only:
+   - master
+   
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
