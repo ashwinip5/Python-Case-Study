@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.5"
+  - "3.7"
 install:
   - pip install pandas
   - pip install gmplot
@@ -10,7 +10,6 @@ install:
 script:
   - export PYTHONPATH=$PYTHONPATH:$(pwd)
   - pwd
-  - cd Python-Case-Study
 branches:
   only:
    - master
