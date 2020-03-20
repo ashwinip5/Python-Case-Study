@@ -8,8 +8,9 @@ install:
   - pip install numpy
   
 script:
-  - main.py
-  
+  - export PYTHONPATH=$PYTHONPATH:$(pwd)
+  - pwd
+  - cd Function
 branches:
   only:
    - master
